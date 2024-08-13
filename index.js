@@ -65,7 +65,7 @@ document.getElementById("submit").onclick = function getResult(){
         c += 1;
         mp +=1;
     } else if (third_choice == "C"){
-        z -= 1;
+        z += 1;
         c -= 1;
         mp -=1;
     } else if (third_choice == "D"){
@@ -148,3 +148,4 @@ document.getElementById("submit").onclick = function getResult(){
         }
     }
 }
+
