@@ -11,6 +11,8 @@ document.getElementById("submit").onclick = function getResult(){
     forth_choice = document.getElementById("forth_Q").value;
     fifth_choice = document.getElementById("fifth_Q").value;
 
+    const out1 = document.getElementById("output1");
+
     z = 0;
     c = 0;
     mp = 0;
@@ -40,11 +42,11 @@ document.getElementById("submit").onclick = function getResult(){
         c -= 1;
         mp -=1;
     } else if (second_choice == "B"){
-        z -= 1;
+        z += 1;
         c += 1;
         mp -=1;
     } else if (second_choice == "C"){
-        z -= 1;
+        z += 1;
         c -= 1;
         mp -=1;
     } else if (second_choice == "D"){
@@ -112,28 +114,36 @@ document.getElementById("submit").onclick = function getResult(){
         if (c > 0){
             if (mp > 0){
                 console.log('浣上不睡教')
+                out1.innerHTML = '浣上不睡教'
             } else if (mp <= 0){
                 console.log('我不想浣了')
+                out1.innerHTML = '我不想浣了'
             }            
         } else if (c <= 0){
             if (mp > 0){
                 console.log('鐵手浣')
+                out1.innerHTML = '鐵手浣'
             } else if (mp <= 0){
                 console.log('護食浣')
+                out1.innerHTML = '護食浣'
             }
         }
     } else if (z <=0){
         if (c > 0){
             if (mp > 0){
                 console.log('交浣生')
+                out1.innerHTML = '交浣生'
             } else if (mp <= 0){
                 console.log('壺壺浣')
+                out1.innerHTML = '壺壺浣'
             }            
         } else if (c <= 0){
             if (mp > 0){
                 console.log('浣蛋了')
+                out1.innerHTML = '浣蛋了'
             } else if (mp <= 0){
-                console.log('洗浣')
+                console.log('洗浣');
+                out1.innerHTML = "洗浣";
             }
         }
     }
